@@ -1,0 +1,25 @@
+.caps {
+	text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: lowercase;
+	font-weight: 300;
+}
+
+h3 {
+	color: $green-forest;
+	font-weight: 500;
+}
+
+.white {
+	color: white;
+}
+
+.center {
+	text-align: center;
+}
+
+a:visited {
+	color: $orange-light;
+}

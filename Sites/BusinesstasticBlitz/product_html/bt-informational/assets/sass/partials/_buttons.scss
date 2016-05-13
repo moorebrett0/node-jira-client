@@ -1,0 +1,68 @@
+.btn {
+	font-family: $font-family-serif;
+	font-weight: 700;
+	// font-size: 20px;
+	letter-spacing: 1px;
+	border: none;
+	border-bottom: 3px solid $orange-dark;
+	border-radius: 0;
+	// font-style: italic;
+	text-transform: uppercase;
+	padding: 10px 19px;
+}
+
+.btn-primary {
+	//should be red button stuff here
+}
+
+//white button stuff
+.btn-secondary {
+	color: white;
+	font-size: 20px;
+	border: 3px solid white;
+	border-radius: 0;
+	padding: 5px 25px 3px;
+	text-transform: uppercase;
+	font-style: normal;
+
+	&:visited {
+		color: white;
+	}
+
+	&:hover {
+		background: white;
+		color: #444;
+	}
+}
+
+.btn-consultation {
+	color: $btn-consultation-color;
+	background-color: $btn-consultation-bg;
+	border-color: $btn-consultation-border;
+
+	&:link,
+	&:visited {
+		color: $btn-consultation-color;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background: $btn-consultation-hover;
+		color: $btn-consultation-color;
+	}
+}
+
+.btn-default {
+	color: $btn-default-color;
+	background-color: $btn-default-bg;
+	border-color: $btn-default-border;
+
+	&:hover {
+		color: $btn-default-hover;
+	}
+
+	&:visited {
+		color: $btn-default-color;
+	}
+}

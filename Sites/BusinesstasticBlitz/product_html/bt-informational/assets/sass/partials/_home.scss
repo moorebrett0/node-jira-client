@@ -1,0 +1,139 @@
+// the home text intro area under the slider
+.home-intro {
+	background-color: $home-intro-bg;
+	display: block;
+  position: relative;
+  padding: 20px 0 40px 0;
+	z-index: 0;
+
+	@if $using-intro-bg {
+		&:after {
+			content: "";
+		  position: absolute;
+		  background-image: $intro-bg-image-sm;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		  opacity: .20;
+		  top: 0;
+		  left: 0;
+		  bottom: 0;
+		  right: 0;
+			z-index: -1;
+
+			//add a larger image if it's above a certain width
+			@media (min-width: $screen-sm-min) {
+				background-image: $intro-bg-image;
+			}
+		}
+	}
+
+	h1 {
+		color: $header-color;
+		margin-bottom: 20px;
+	}
+}
+
+// the 3 column area on the home page
+.home-thirds {
+	padding: 20px 0 30px 0;
+	background-color: $home-thirds-bg;
+	@if $home-thirds-border != null {
+		border-bottom: 1px solid $home-thirds-border;
+	}
+
+	h1 {
+		margin: 30px 0;
+	}
+
+	.home-thirds-inner {
+		display: block;
+		position: relative;
+		background-color: #fff;
+		color: #000;
+		padding: 30px 30px 60px 30px;
+		margin-bottom: 30px;
+		@if $home-thirds-border != null {
+			border: 1px solid $home-thirds-border;
+		}
+		.img-wrapper {
+			width: 50px;
+			height: 50px;
+			align: center;
+			margin-top: 50px;
+			margin-bottom: -10px;
+		}
+	}
+}
+
+// makes a round image
+.round-image {
+	width: 105px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+// home testimonials area
+.home-testimonials {
+	font-size: 16px;
+	padding: 20px 0;
+	@if $testimonial-color != null {
+		color: $green-gray;
+	}
+	@if $testimonial-bg != null {
+		background-color: #fff;
+	}
+
+	@media screen and (min-width: $screen-sm-min) {
+		font-size: 23px;
+
+		.title {
+			font-size: 18px;
+		}
+	}
+
+	img {
+		display: block;
+		margin: 0 auto 30px auto;
+	}
+
+	.hanging {
+		position: absolute;
+		left: 10px;
+	}
+
+	.author, .title {
+		text-align: right;
+	}
+
+	.author {
+		margin-top: 30px;
+	}
+
+	.center {
+		margin-top: 20px;
+	}
+
+	.carousel {
+		// min-height: 375px;
+
+		.slider-copy {
+			position: relative;
+			bottom: auto;
+			text-align: left;
+			max-width: 500px;
+
+		}
+		.slider-container {
+			width: 100%;
+			height: 100%;
+		}
+		.carousel-control {
+			color: $green-forest;
+			background-image: none;
+			opacity: 1;
+			text-shadow: none;
+		}
+
+	}
+}

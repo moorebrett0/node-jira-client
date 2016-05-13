@@ -1,0 +1,19 @@
+/*Sites
+This is where all the styles are compiled for the Businesstastic Package
+*/
+
+// Core variables and mixins
+//Redeclare bootstrap font
+$icon-font-path: '../bootstrap-sass/fonts/bootstrap/';
+@import '../bootstrap-sass/stylesheets/bootstrap-custom';
+
+
+//Customized bootstrap variables
+@import 'partials/variables';
+
+//Import the typography styles for GLOBAL Style Sheets
+@import 'partials/typography';
+//Import header and footer styles
+@import 'partials/header';
+@import 'partials/footer';
+//Import styles -- each style is based on

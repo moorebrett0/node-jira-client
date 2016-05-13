@@ -1,0 +1,52 @@
+
+
+// Styles for the template part content-products.php
+.products {
+  padding: 50px 0;
+  background-color: #f3f3f3;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .product-inner {
+    margin: 0 auto 30px;
+    max-width: 360px;
+
+
+    .img-wrapper {
+      height: 175px;
+      overflow: hidden;
+      border-bottom: 5px solid $top-nav-bg;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .product-info {
+      padding: 15px 10px;
+      background-color: #fff;
+
+      span {
+        font-weight: 700;
+        font-size: 18px;
+        color: $header-color;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+
+      a {
+        font-size: 18px;
+        font-weight: 700;
+        float: right;
+      }
+    }
+  }
+}
+
+.products-link {
+  float: right;
+  margin-bottom: 50px;
+}

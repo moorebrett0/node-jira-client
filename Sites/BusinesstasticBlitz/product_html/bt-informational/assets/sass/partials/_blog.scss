@@ -1,0 +1,118 @@
+// Styles for home.php - the main blog list page
+.blog {
+
+  //override default hero styles in _globals for the blog page
+  .hero-image {
+    border-top: 4px solid $green-light;
+  }
+
+  //list of blog posts
+  .blog-list {
+    h2 {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .blog-item {
+      margin-bottom: 80px;
+
+      .timestamp {
+        color: $link-color;
+        margin-bottom: 20px;
+      }
+
+      a {
+        margin-top: 15px;
+      }
+
+      img {
+        margin-bottom: 15px;
+      }
+
+      ul,
+      ol {
+        margin-left: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 30px;
+
+        li {
+          margin-bottom: 5px;
+        }
+      }
+
+      blockquote {
+        font-size: $font-size-medium;
+        font-style: italic;
+        margin: 30px 0;
+        color: $gray-base;
+        border-color: $gray-light;
+        border-left-width: 7px;
+      }
+
+      .wp-caption {
+        font-style: italic;
+      }
+    }
+  }
+
+  //widget sidebar
+  .sidebar {
+
+    h2 {
+      color: $header-color;
+      font-family: $font-family-serif;
+      font-size: $font-size-medium;
+      text-transform: none;
+      text-align: left;
+      margin: 10px 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      display: inline-block;
+      color: $link-color;
+      padding: 2px 0;
+    }
+
+    .rpwe-block {
+      a {
+        color: #444;
+      }
+    }
+  }
+
+  //pagination
+  .pagination {
+    margin: 0 0 80px;
+
+    .page-numbers {
+      display: inline-block;
+      font-family: $font-family-sans-serif;
+      color: $header-color;
+      text-align: center;
+      padding: 5px 10px;
+    }
+
+    .current {
+      color: white;
+      background: $header-color;
+      border-radius: 2px;
+    }
+  }
+
+  .single-post-navigation {
+    margin: 60px 0 30px;
+    color: $link-color;
+  }
+} //end blog section

@@ -1,0 +1,100 @@
+.carousel {
+   min-height: 275px;
+
+  .slider-copy {
+    position: relative;
+    bottom: auto;
+    text-align: left;
+    max-width: 700px;
+  }
+
+  .carousel-control {
+    //color: $green-forest;
+    background-image: none;
+    opacity: 1;
+    text-shadow: none;
+  }
+}
+// A different variant of the header image that uses a slider instead
+// of one image
+.carousel {
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+  .item img {
+    width: 100%;
+    height: 100%;
+  }
+  .slider-copy-wrapper {
+    position: relative;
+
+    .slider-copy {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      padding: 0 20px;
+
+      p {
+        color: white;
+      }
+    }
+
+    // Makes the copy aligned left at 768px and up
+    .copy-left {
+
+      @media screen and (min-width: $screen-sm-min) {
+        left: 0;
+        right: auto;
+        bottom: 50px;
+        text-align: left;
+        max-width: 500px;
+      }
+    }
+
+    a {
+      margin-top: 20px;
+    }
+  }
+
+  .carousel-control {
+    width: 25%;
+
+    img {
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      margin-top: -17px;
+      width: 15px;
+      z-index: 5;
+
+      @media screen and (min-width: $screen-sm-min) {
+        width: 20px;
+      }
+    }
+    &.right {
+      img {
+        right: 5px;
+
+        @media screen and (min-width: $screen-sm-min) {
+          right: 15px;
+        }
+      }
+    }
+
+    &.left {
+      img {
+        left: 5px;
+
+        @media screen and (min-width: $screen-sm-min) {
+          left: 15px;
+        }
+      }
+    }
+  }
+}

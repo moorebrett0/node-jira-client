@@ -1,0 +1,155 @@
+body {
+	background-color: transparent;
+}
+.little-nav {
+	background: $color-light;
+
+	text-align: center;
+	color: $color-light;
+	padding: 10px 0;
+   ul {
+		 list-style: none;
+		 font-family: $copperplate;
+		 li {
+			 display: inline;
+		 }
+	 }
+	 a {
+		 color: $font-color;
+	 }
+	p {
+		font-size: 12px;
+		margin-bottom: 0;
+
+		@media screen and (min-width: $screen-sm-min) {
+			font-size: $font-size-base;
+		}
+	}
+
+	.logo {
+		display: inline-block;
+		margin-bottom: 15px;
+	}
+
+	.linked-in {
+		margin-left: 7px;
+		height: 20px;
+		width: 20px;
+	}
+
+	//above 992px
+	@media screen and (min-width: $screen-md-min) {
+		text-align: right;
+	}
+}
+
+// main navigation
+.navbar-nav > li > a {
+	font-size: $font-size-large;
+	margin: 0 15px;
+	padding-bottom: 8px;
+	padding-left: 0;
+	padding-right: 0;
+}
+.navbar-default {
+	background-color: $color-darklight;
+}
+
+.navbar {
+	font-family: $copperplate;
+	font-weight: 300;
+	text-transform: lowercase;
+	margin-bottom: 0;
+
+
+	.navbar-collapse {
+		padding: 0;
+		margin-bottom: 15px;
+		margin-top: 12px;
+
+		@media screen and (min-width: $screen-sm-min) {
+			text-align: center;
+			margin-bottom: 0;
+		}
+	}
+
+	.navbar-header {
+		button {
+			border-radius: 0;
+		}
+	}
+
+	li:last-child {
+		a {
+			padding-right: 0;
+			margin-right: 0;
+			color: $cta-light;
+		}
+	}
+
+	li.current-menu-item {
+		a {
+			border-bottom: 2px solid #fff;
+		}
+	}
+
+	ul {
+		float: right;
+		list-style: none;
+		margin: 0 0;
+    padding: 0;
+
+		li {
+			display: inline;
+			font-size: $font-size-large;
+			margin-right: 70px;
+			margin-top: 12px;
+		}
+	}
+
+	.logo {
+		// margin-top: -28px;
+		float: left;
+		padding: 10px;
+		width: 225px;
+
+		@media screen and (min-width: $screen-sm-min) {
+			margin-top: -28px;
+			padding: 0;
+			width: 100%;
+		}
+	}
+
+	//fix the container messing up the navbar on smaller screens
+	@media screen and (max-width: $screen-sm-max) {
+		.container {
+			margin: 0;
+			width: 100%;
+		}
+		ul {
+			display: inline;
+			margin: 0 auto;
+			float: none;
+		}
+		.navbar-default > a {
+			padding-right: 60px;
+		}
+	}
+}
+
+// Remove background color so texture shows
+.navbar-default {
+	background-color: transparent;
+}
+//header-two cover image and optional styles
+.cover-image {
+background-image: url('https://unsplash.imgix.net/photo-1418065460487-3e41a6c84dc5?q=25&amp;fm=jpg&amp;s=127f3a3ccf4356b7f79594e05f6c840e');
+background-size: 100% 100%;
+height: 400px;
+	.row {
+		margin-top: 50px;
+	}
+	p {
+		font-weight: bold;
+	}
+ }

@@ -1,0 +1,577 @@
+// Styles that affect all pages or are shared accross pages
+
+//default body styles for the site
+body {
+  @if $using-background {
+    background: url('../images/texture-bg.gif');
+  } @else {
+    background-color: $body-bg;
+  }
+  font-family: $font-body;
+}
+
+//default form styles for the site
+form {
+  margin: 50px 0;
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+  label {
+    font-weight: normal;
+  }
+
+  input.form-control {
+    height: 44px;
+  }
+
+  .form-control {
+    border-radius: 0;
+  }
+
+  .submit {
+    width: 200px;
+  }
+}
+
+// Styles for social icons
+.linked-in {
+  display: inline-block;
+
+  img {
+    width: 100%;
+    height: 100%;
+    height: 20px;
+    top: 0;
+    left: 0;
+  }
+}
+
+// Standard default page styles
+.tic {
+  @if $page-border-top != null {
+    border-top: $page-border-top;
+  }
+
+  h1 {
+    margin: 0 0 20px;
+    // letter-spacing: -1px;
+  }
+
+  h2 {
+    font-size: 18px;
+    color: $green-forest-light;
+    // letter-spacing: -1px;
+  }
+
+  //style title on page.php
+  .page-title {
+    text-align: center;
+    background-color: #F4F3F1;
+    padding: 50px 0 40px;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .page-content {
+    position: relative;
+    padding: 50px 0;
+    margin: 0;
+    z-index: 1;
+
+    a {
+      display: inline;
+      text-decoration: none;
+      border-bottom: 1px solid;
+    }
+
+    @if $page-content-bg-image != null {
+      @media screen and (min-width: $screen-md-min) {
+        &:after {
+          content: "";
+          position: absolute;
+          background: $page-content-bg-image no-repeat 100% 100%;
+          background-position: top right;
+          opacity: .25;
+          top: 50px;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+.consultation {
+  background-color: $consultation-bg;
+  display: block;
+  position: relative;
+  text-align: center;
+  // height: 230px;
+  padding: 50px 0;
+  z-index: 0;
+
+  h1 {
+    color: $inverse-color;
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  p {
+    color: $inverse-color;
+  }
+
+  a {
+    margin-top: 10px;
+  }
+
+  @if $consultation-bg-image != null {
+    &:after {
+      content: "";
+      position: absolute;
+      background-image: $consultation-bg-image-sm;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      opacity: .20;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      @media screen and (min-width: $screen-sm-min) {
+        background-image: $consultation-bg-image;
+      }
+    }
+  }
+}
+
+//Standard hero image for all pages
+.hero-image {
+  position: relative;
+  background: $default-hero no-repeat top;
+  background-size: cover;
+  z-index: -1;
+  color: white;
+  text-align: center;
+  // border-top: 4px solid $green-light;
+  height: auto;
+  min-height: $hero-height;
+  @if $hero-border != null {
+    border-top: $hero-border;
+    border-bottom: $hero-border;
+  }
+
+  .recent-post {
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 550px;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+    color: white;
+    margin-top: 0;
+    z-index: 100;
+  }
+
+  p {
+    font-size: $font-size-medium;
+  }
+
+  a {
+    margin-top: 10px;
+  }
+}
+
+// A different variant of the header image that uses a slider instead
+// of one image
+.carousel {
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .slider-copy-wrapper {
+    position: relative;
+
+    .slider-copy {
+
+      left: 0;
+      right: 0;
+      bottom: 50px;
+      margin-top: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -150px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    // Makes the copy aligned left at 768px and up
+    .copy-left {
+
+      @media screen and (min-width: $screen-sm-min) {
+        left: 0;
+        right: auto;
+        bottom: 50px;
+        text-align: left;
+        max-width: 500px;
+      }
+    }
+
+    a {
+      margin-top: 20px;
+    }
+  }
+
+  .carousel-control {
+    width: 25%;
+
+    img {
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      margin-top: -17px;
+      width: 15px;
+      z-index: 5;
+
+      @media screen and (min-width: $screen-sm-min) {
+        width: 20px;
+      }
+    }
+    &.right {
+      img {
+        right: 5px;
+
+        @media screen and (min-width: $screen-sm-min) {
+          right: 15px;
+        }
+      }
+    }
+
+    &.left {
+      img {
+        left: 5px;
+
+        @media screen and (min-width: $screen-sm-min) {
+          left: 15px;
+        }
+      }
+    }
+
+    .glyphicon-chevron-right {
+      right: 15px;
+    }
+
+    .glyphicon-chevron-left {
+      left: 15px;
+    }
+
+    @media screen and (min-width: $screen-sm-min) {
+      width: 15%;
+
+      .glyphicon-chevron-right {
+        right: 25px;
+      }
+
+      .glyphicon-chevron-left {
+        left: 25px;
+      }
+    }
+  }
+}
+
+// Carousel overrides for the hero-slider
+.slider-border {
+  background-color: $hero-slider-border;
+  height: 8px;
+}
+
+.hero-slider {
+  .carousel {
+    color: beige;
+
+    h1 {
+      color: white;
+    }
+
+    .item {
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: cover;
+      min-height: 375px;
+      width: 100%;
+    }
+
+    .slider-copy {
+      position: absolute;
+      text-align: center;
+      left: 0;
+      right: 0;
+      bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 30px;
+      max-width: 500px;
+
+    }
+  }
+}
+
+// From the Blog defaults for all pages
+.from-the-blog {
+  h1 {
+    text-align: center;
+    margin: 60px 0 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: $inverse-color;
+  }
+
+  // @media screen and (min-width: $screen-sm-min) {
+  //   h1 {
+  //     font-size: 48px;
+  //   }
+  //
+  //   h2 {
+  //     font-size: 36px;
+  //   }
+  // }
+}
+
+
+// Default sidebar for the site, override in specific page sass files
+.sidebar {
+  background: url('../images/blog-sidebar-bg-transparency.png') no-repeat top right;
+  border: 2px solid #EFE9DA;
+  margin-bottom: 50px;
+  padding: 15px;
+
+  @media screen and (min-width: $screen-lg-min) {
+    margin-left: 40px;
+  }
+
+  aside {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    color: $green-darklight;
+    font-family: $font-family-serif;
+    font-size: $font-size-medium;
+    text-transform: none;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  .form-control {
+    height: 42px;
+  }
+
+  a {
+    display: inline-block;
+    color: $orange-light;
+    padding: 2px 0;
+  }
+
+  .rpwe-block {
+    a {
+      color: #444;
+    }
+  }
+}
+
+// Default social styles (template-parts/content-social.php)
+.social {
+  text-align: center;
+
+  a {
+    color: $green-gray;
+    padding: 5px 0;
+    width: 100%;
+  }
+
+  a.linked-in {
+    display: inline-block;
+    position: relative;
+    left: -3px;
+
+    img {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .glyphicon {
+    margin-right: 15px;
+    font-size: $font-size-large;
+    top: 4px;
+  }
+}
+
+//Styles for the gallery template part
+.gallery {
+	alignment: center;
+	padding-top: 60px;
+	margin-top: 50px;
+	padding-bottom: 175px;
+	background-color: $photo-bg;
+}
+
+// Styles for the content-intro template part
+.intro-block {
+  background-color: $intro-block-bg-color;
+	display: block;
+  position: relative;
+  padding: 20px 0 40px 0;
+  min-height: 320px;
+	z-index: 0;
+
+	@if $intro-block-bg-image != null {
+		&:after {
+			content: "";
+		  position: absolute;
+		  background-image: $intro-block-bg-image-sm;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		  opacity: .30;
+		  top: 0;
+		  left: 0;
+		  bottom: 0;
+		  right: 0;
+			z-index: -1;
+
+			//add a larger image if it's above a certain width
+			@media (min-width: $screen-sm-min) {
+				background-image: $intro-block-bg-image;
+			}
+		}
+	}
+
+  .featured-block {
+    position: relative;
+    background-color: $featured-block-color;
+    color: $inverse-color;
+    font-size: 26px;
+    padding: 25px;
+    top: -100px;
+    margin-bottom: -75px;
+
+    @if $featured-block-border != null {
+      border: $featured-block-border;
+    }
+
+    @media (min-width: $screen-md-min) {
+      min-height: 350px;
+      margin-bottom: -100px;
+    }
+    @media (min-width: $screen-sm-min) {
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  a {
+    margin-top: 20px;
+  }
+} //end intro-block
+
+//Styles for the thirds-content template part
+.thirds-content {
+  padding-top: 50px;
+
+  .img-wrapper {
+    height: 50px;
+    width: 50px;
+    background: url('../images/thirds-mid.png') no-repeat bottom;
+    align: center;
+  }
+
+  .thirds-inner {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+.cta-signup {
+  //see mixin in style.scss for more info
+  @include bg-image($cta-signup-bg-image, $cta-signup-bg, .3);
+
+  padding: 40px 0;
+  text-align: center;
+  color: $inverse-color;
+
+  h1 {
+    color: $inverse-color;
+    margin: 0 0 10px;
+  }
+
+  .cta-signup-form {
+    margin: 25px 0;
+
+    input {
+      color: $text-color;
+      display: inline-block;
+      margin-right: -4px;
+      height: 41px;
+    }
+  }
+}
+
+.jobs-cta {
+  //see mixin in _mixin.scss under partials for more info
+  @include bg-image($jobs-cta-bg-image, $cta-signup-bg, .3);
+
+  padding: 40px 0;
+  text-align: center;
+  color: $inverse-color;
+
+  h1 {
+    color: $inverse-color;
+    margin: 20px 0 10px;
+  }
+
+  .btn-default {
+    margin-top: 15px;
+  }
+}
+
+.rental-mats {
+  padding: 50px 0;
+  position: relative;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.contact-page {
+  margin-bottom: 75px;
+}

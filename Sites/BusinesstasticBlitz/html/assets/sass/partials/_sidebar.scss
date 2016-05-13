@@ -1,0 +1,24 @@
+ .sidebar {
+     float: left;
+     height: 100%;
+     border: 1px solid $color-secondary-border;
+     background-color: $color-secondary-border;
+     margin-left: 40px;
+     padding: 15px;
+    }
+    .sidebar-links {
+        list-style-type: none;
+        li {
+            margin: 10px auto;
+            font-size: 22px;
+        }
+        a {
+            color: $font-color;
+        }
+    }
+.blog-post {
+    padding-bottom: 20px;
+}
+.pagination {
+    padding-bottom: 15px;
+}

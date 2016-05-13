@@ -1,0 +1,13 @@
+// gradient
+.gradient {
+  position: absolute;
+  display: block;
+  background-image: linear-gradient(to top,#000,transparent);
+  background-size: cover;
+  opacity: .65;
+  bottom: 0;
+  left: 0;
+  height: 300px;
+  width: 100%;
+  z-index: 0;
+}

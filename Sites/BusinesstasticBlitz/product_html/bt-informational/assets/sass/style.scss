@@ -1,0 +1,27 @@
+// Cusomized Bootstrap variables
+@import 'partials/variables';
+@import 'partials/mixins';
+
+// Core variables and mixins
+//Redeclare bootstrap font
+$icon-font-path: '../bootstrap-sass/fonts/bootstrap/';
+@import '../bootstrap-sass/stylesheets/bootstrap-custom';
+
+// Partials
+@import 'partials/font-face';
+@import 'partials/typography';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/buttons';
+@import 'partials/global';
+@import 'partials/blog';
+@import 'partials/contact-us';
+@import 'partials/home';
+
+//Template part styles
+@import 'partials/fourths-content';
+@import 'partials/recent-blogs';
+@import 'partials/products';
+@import 'partials/team';
+
+@import 'partials/utilities';

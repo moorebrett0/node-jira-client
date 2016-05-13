@@ -1,0 +1,36 @@
+// Custom mixins for the site
+
+//mixin for the background with a color and transparent image
+//basically makes a background color be opaque so the image can so through
+@mixin bg-image($image, $bg-color: null, $opacity: .2, $posx: center, $posy: center, $image-sm: null) {
+  display: block;
+  position: relative;
+  @if $bg-color != null {
+    background-color: $bg-color;
+  }
+  z-index: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    @if $image-sm != null {
+      background-image: $image-sm;
+    }
+    @else {
+      background-image: $image;
+    }
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: $posx $posy;
+    opacity: $opacity;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    @media screen and (min-width: $screen-sm-min) {
+      background-image: $image;
+    }
+  }
+}

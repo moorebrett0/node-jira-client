@@ -1,0 +1,51 @@
+<!-- Gallery Page w/ Modal template
+
+Bt Informational -->
+<div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">{{pages.gallery.title}}</h1>
+          </div>
+        </div>
+        {% for block in blocks %}
+        <div class="row">
+          <div class="col-md-4">
+            <div id="modal" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body">
+                    <img src="{{block || img_tag}}" class="img-responsive">
+                  </div>
+                  <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">X</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a data-toggle="modal" data-target="#modal"><img src="{{block | img_tag}}" class="img-responsive"></a>
+            <h3>{{block.title}}</h3>
+            <p>{{block.description}}</p>
+          </div>
+          <div class="col-md-4">
+            <div id="modal" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <h4 class="modal-title">{{block.modal}}</h4>
+                  </div>
+                  <div class="modal-body">
+                    <img src="{{block.description}}" class="img-responsive">
+                  </div>
+                  <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">X</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}

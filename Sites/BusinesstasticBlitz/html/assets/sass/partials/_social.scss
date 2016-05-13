@@ -1,0 +1,27 @@
+.footer-social {
+ul {
+    overflow: auto;
+}
+
+ul li {
+    float: left;
+    list-style: none;
+}
+
+ul li a i {
+    background: #fff;
+    color: $color-darklight;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+
+ul li a i:hover {
+    opacity: .7;
+}
+}
